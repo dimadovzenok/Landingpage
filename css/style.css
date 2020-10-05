@@ -1,0 +1,89 @@
+:root {
+    --dark-color:rgba(4, 53, 48, 0.692);
+    --medium-color:rgb(242, 250, 250);
+    --light-color:rgba(49, 202, 187, 0.692);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    padding: 2rem;
+}
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to bottom right, var(--light-color), var(--dark-color)), url('../img/pexels-kostiantyn-stupak-190340.jpg');
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0%, 100% 73%, 0% 100%);
+    
+}
+
+.text-box{
+    position: absolute;
+    top: 40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.heading-primary{
+    text-transform: uppercase;
+}
+.heading-primary-main{
+    display: block;
+    font-size: 5rem;
+    letter-spacing: 1.5;
+    animation-name: moveinleft;
+    animation-duration: 3;
+    animation-timing-function: ease-out;
+}
+@keyframes moveinleft{
+    0%{transform: translateX(-100px);opacity: 0;}
+    80%{transform: translateX(20px);}
+    100%{transform: translateX(0);opacity: 1;}
+}
+.heading-primary-sub{
+    display: block;
+    font-size: 2rem;
+    letter-spacing: .6rem;
+    animation-name: moveinright;
+    animation-duration: 3;
+    animation-timing-function: ease-out;
+}
+@keyframes moveinright{
+    0%{transform: translateX(100px);opacity: 0;}
+    80%{transform: translateX(-20px);}
+    100%{transform: translateX(0);opacity: 1;}
+
+}
+.btn-div {
+    text-align: center;
+}
+
+.btn {
+  
+  display: inline-block;
+  color: rgb(8, 3, 3);
+  text-decoration: none;
+  border: 2px solid rgb(15, 9, 9);
+  padding: 1rem;
+  margin: 2rem;
+  opacity: 0;
+  animation-name: btn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  transition-property: transform;
+  transition-duration: 2s; 
+  
+}
+
+.btn:hover {
+  transform: rotateY(180deg);
+}
+
+
+@keyframes btn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
